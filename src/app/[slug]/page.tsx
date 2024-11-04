@@ -5,6 +5,14 @@ import { notFound } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 
+export async function generateStaticParams() {
+  const blogs = await getBlogs();
+
+  return blogs.map((blog) => ({
+    slug: blog.frontmatter.slug,
+  }));
+}
+
 export default async function BlogPost({
   params,
 }: {
