@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export const NonMemoizedMarkdown = ({ children }: { children: string }) => {
   const components = {
@@ -57,7 +57,7 @@ export const NonMemoizedMarkdown = ({ children }: { children: string }) => {
     },
 
     code: ({ node, inline, className, children, ...props }: any) => {
-      const match = /language-(\w+)/.exec(className || "");
+      const match = /language-(\w+)/.exec(className || '');
       return !inline && match ? (
         <pre
           {...props}

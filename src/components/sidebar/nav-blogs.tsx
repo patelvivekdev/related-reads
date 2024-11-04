@@ -1,6 +1,6 @@
-import { Pencil, Trash2 } from "lucide-react";
+import { Pencil, Trash2 } from 'lucide-react';
 
-import { Collapsible } from "@/components/ui/collapsible";
+import { Collapsible } from '@/components/ui/collapsible';
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -9,8 +9,8 @@ import {
   SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar";
-import Link from "next/link";
+} from '@/components/ui/sidebar';
+import Link from 'next/link';
 
 export function NavBlogs({
   blogs,

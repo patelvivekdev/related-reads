@@ -1,15 +1,15 @@
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Home() {
   const technologies = [
-    "React",
-    "Next.js",
-    "AI",
-    "Tailwind CSS",
-    "Vercel AI SDK",
-    "Mixedbread as embedding Model",
-    "Google generative API (flash-02) for summary",
+    'React',
+    'Next.js',
+    'AI',
+    'Tailwind CSS',
+    'Vercel AI SDK',
+    'Mixedbread as embedding Model',
+    'Google generative API (flash-02) for summary',
   ];
 
   return (

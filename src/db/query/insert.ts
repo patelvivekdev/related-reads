@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
-import { db } from "..";
-import { blogs } from "../schema";
+import { eq } from 'drizzle-orm';
+import { db } from '..';
+import { blogs } from '../schema';
 
 export async function storeEmbedding(
   slug: string,

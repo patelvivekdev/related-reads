@@ -1,9 +1,9 @@
-import { Markdown } from "@/components/Markdown";
-import { RelatedBlogs } from "@/components/RelatedPosts";
-import { getBlogs } from "@/lib/blogs";
-import { notFound } from "next/navigation";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+import { Markdown } from '@/components/Markdown';
+import { RelatedBlogs } from '@/components/RelatedPosts';
+import { getBlogs } from '@/lib/blogs';
+import { notFound } from 'next/navigation';
+import { Card, CardContent } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
 
 export default async function BlogPost({
   params,

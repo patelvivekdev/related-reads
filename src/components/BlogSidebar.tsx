@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import {
   Sidebar,
   SidebarContent,
@@ -10,7 +10,7 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
-} from "@/components/ui/sidebar";
+} from '@/components/ui/sidebar';
 
 type BlogPost = {
   slug: string;
@@ -23,7 +23,7 @@ export function BlogSidebar() {
 
   useEffect(() => {
     // Fetch blog posts
-    fetch("/api/posts")
+    fetch('/api/posts')
       .then((res) => res.json())
       .then((data) => setPosts(data));
   }, []);

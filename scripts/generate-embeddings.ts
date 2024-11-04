@@ -1,21 +1,21 @@
-import { glob } from "glob";
-import matter from "gray-matter";
-import fs from "fs";
-import path from "path";
-import { generateEmbeddings, getSummarizedBlog } from "@/ai";
-import { storeEmbedding } from "@/db/query/insert";
+import { glob } from 'glob';
+import matter from 'gray-matter';
+import fs from 'fs';
+import path from 'path';
+import { generateEmbeddings, getSummarizedBlog } from '@/ai';
+import { storeEmbedding } from '@/db/query/insert';
 
 async function init() {
-  const mdxFiles = await glob("src/content/**/*.mdx");
+  const mdxFiles = await glob('src/content/**/*.mdx');
   console.log(`Found ${mdxFiles.length} blog posts`);
-  console.log("=================================");
+  console.log('=================================');
 
   for (const file of mdxFiles) {
-    const content = fs.readFileSync(file, "utf-8");
+    const content = fs.readFileSync(file, 'utf-8');
     const { data: frontmatter } = matter(content);
 
     const stats = fs.statSync(file);
-    const cacheFile = path.join(".cache", `${path.basename(file)}.json`);
+    const cacheFile = path.join('.cache', `${path.basename(file)}.json`);
 
     if (
       fs.existsSync(cacheFile) &&
@@ -25,7 +25,7 @@ async function init() {
     }
 
     console.log(`Processing ${frontmatter.title}`);
-    console.log("=================================");
+    console.log('=================================');
 
     const summarizedBlog = await getSummarizedBlog(content);
     console.log(`--> 1. Summarized ${frontmatter.title}`);
@@ -41,12 +41,12 @@ async function init() {
     );
     console.log(`--> 3. Stored embedding for ${frontmatter.title}`);
 
-    fs.mkdirSync(".cache", { recursive: true });
+    fs.mkdirSync('.cache', { recursive: true });
     fs.writeFileSync(cacheFile, JSON.stringify({ generated: new Date() }));
   }
 
-  console.log("=================================");
-  console.log("Embeddings generated successfully!");
+  console.log('=================================');
+  console.log('Embeddings generated successfully!');
 }
 
 init();

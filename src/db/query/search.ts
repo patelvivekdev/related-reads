@@ -1,6 +1,6 @@
-import { eq, sql } from "drizzle-orm";
-import { db } from "..";
-import { blogs } from "../schema";
+import { eq, sql } from 'drizzle-orm';
+import { db } from '..';
+import { blogs } from '../schema';
 
 export const getBlogContent = async (slug: string) => {
   return await db

@@ -32,10 +32,10 @@ One of the key aspects of the TypeScript-JavaScript relationship is the compilat
 ```typescript
 // TypeScript code
 function greet(name: string): string {
-    return `Hello, ${name}!`;
+  return `Hello, ${name}!`;
 }
 
-const message: string = greet("TypeScript");
+const message: string = greet('TypeScript');
 console.log(message);
 ```
 
@@ -44,9 +44,9 @@ When compiled, this TypeScript code is transformed into standard JavaScript:
 ```javascript
 // Compiled JavaScript
 function greet(name) {
-    return "Hello, " + name + "!";
+  return 'Hello, ' + name + '!';
 }
-var message = greet("TypeScript");
+var message = greet('TypeScript');
 console.log(message);
 ```
 
@@ -57,7 +57,7 @@ This compilation step allows TypeScript to add features on top of JavaScript whi
 TypeScript's type system is not always explicit. It can infer types based on the context:
 
 ```typescript
-let name = "Alice"; // TypeScript infers that name is a string
+let name = 'Alice'; // TypeScript infers that name is a string
 name = 42; // Error: Type 'number' is not assignable to type 'string'
 ```
 
@@ -69,14 +69,14 @@ TypeScript introduces interfaces, which provide a powerful way to define the str
 
 ```typescript
 interface User {
-    id: number;
-    name: string;
-    email?: string; // Optional property
+  id: number;
+  name: string;
+  email?: string; // Optional property
 }
 
 function createUser(user: User): User {
-    // Implementation
-    return user;
+  // Implementation
+  return user;
 }
 ```
 
@@ -88,25 +88,25 @@ While JavaScript has classes (introduced in ES6), TypeScript extends this with a
 
 ```typescript
 class Animal {
-    protected name: string;
-    
-    constructor(name: string) {
-        this.name = name;
-    }
-    
-    public makeSound(): void {
-        console.log("Some generic animal sound");
-    }
+  protected name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  public makeSound(): void {
+    console.log('Some generic animal sound');
+  }
 }
 
 class Dog extends Animal {
-    public makeSound(): void {
-        console.log("Woof! Woof!");
-    }
-    
-    public fetch(): void {
-        console.log(`${this.name} is fetching.`);
-    }
+  public makeSound(): void {
+    console.log('Woof! Woof!');
+  }
+
+  public fetch(): void {
+    console.log(`${this.name} is fetching.`);
+  }
 }
 ```
 
@@ -157,4 +157,3 @@ As web applications continue to grow in complexity, the combination of JavaScrip
 Whether you're a JavaScript veteran or a newcomer to web development, understanding the relationship between TypeScript and JavaScript is crucial in today's development landscape. By leveraging the strengths of both languages, developers can create robust, scalable, and maintainable web applications that meet the demands of modern software development.
 
 This blog post provides a comprehensive overview of the relationship between TypeScript and JavaScript, covering their origins, key features, benefits, challenges, and future prospects. It includes code examples to illustrate important concepts and discusses the impact of TypeScript on the JavaScript ecosystem.
-

@@ -1,5 +1,5 @@
 ---
-title: "Exploring Advanced Concepts in Machine Learning: Ensemble Methods"
+title: 'Exploring Advanced Concepts in Machine Learning: Ensemble Methods'
 description: Dive deep into ensemble methods, exploring their types, advantages, and practical implementations.
 slug: ensemble-methods
 ---
@@ -21,9 +21,10 @@ There are several types of ensemble methods, each with its own approach to combi
 Bagging involves training multiple instances of the same algorithm on different subsets of the training data, then aggregating their predictions.
 
 **Key Characteristics:**
+
 - Creates multiple subsets of the original dataset through bootstrapping (sampling with replacement)
 - Trains a separate model on each subset
-- Combines predictions through voting (for classification) or  averaging (for regression)
+- Combines predictions through voting (for classification) or averaging (for regression)
 
 **Example: Random Forest**
 
@@ -53,6 +54,7 @@ print(f"Accuracy: {rf_classifier.score(X_test, y_test):.4f}")
 Boosting methods train models sequentially, with each new model focusing on the errors of the previous ones.
 
 **Key Characteristics:**
+
 - Trains models sequentially
 - Each new model gives more weight to instances that were misclassified by previous models
 - Combines models through weighted voting or averaging
@@ -77,6 +79,7 @@ print(f"Accuracy: {gb_classifier.score(X_test, y_test):.4f}")
 Stacking involves training multiple diverse models and then training a meta-model to combine their predictions.
 
 **Key Characteristics:**
+
 - Trains multiple base models (often of different types)
 - Uses predictions from base models as inputs to a meta-model
 - Meta-model learns how to best combine the predictions of the base models

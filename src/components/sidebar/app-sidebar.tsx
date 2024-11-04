@@ -1,39 +1,39 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { Bot, BrainCircuit, Settings2 } from "lucide-react";
+import * as React from 'react';
+import { Bot, BrainCircuit, Settings2 } from 'lucide-react';
 
 import {
   Sidebar,
   SidebarContent,
   SidebarHeader,
   SidebarRail,
-} from "@/components/ui/sidebar";
+} from '@/components/ui/sidebar';
 
-import { NavMain } from "@/components/sidebar/nav-main";
-import { NavBlogs } from "@/components/sidebar/nav-blogs";
+import { NavMain } from '@/components/sidebar/nav-main';
+import { NavBlogs } from '@/components/sidebar/nav-blogs';
 
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: 'shadcn',
+    email: 'm@example.com',
+    avatar: '/avatars/shadcn.jpg',
   },
   navMain: [
     {
-      title: "Models",
-      url: "#",
+      title: 'Models',
+      url: '#',
       icon: Bot,
     },
     {
-      title: "Memories",
-      url: "/memories",
+      title: 'Memories',
+      url: '/memories',
       icon: BrainCircuit,
     },
     {
-      title: "AI Agents",
-      url: "#",
+      title: 'AI Agents',
+      url: '#',
       icon: Settings2,
     },
   ],
