@@ -32,3 +32,7 @@ TARGET AUDIENCE: [Intended readership and required expertise level (Beginner/Int
 export const systemEmbeddingsPrompt = `
 Generate embeddings for the given blog post. This embedding is going to be used for a recommendation system.
 `;
+
+export const systemSearchPrompt = `
+Represent this question for searching relevant blogs:
+`;

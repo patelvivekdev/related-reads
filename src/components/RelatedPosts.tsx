@@ -1,6 +1,6 @@
-import { getRelatedBlogs } from '@/lib/blogs';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { getRelatedBlogs } from '@/db/query/search';
 
 interface RelatedBlogsProps {
   currentSlug: string;
