@@ -1,5 +1,7 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { SquareArrowOutUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   const technologies = [
@@ -9,11 +11,14 @@ export default function Home() {
     'Tailwind CSS',
     'Vercel AI SDK',
     'Mixedbread as embedding Model',
+    'Mixedbread as reranking Model',
     'Google generative API (flash-02) for summary',
+    'Drizzle ORM',
+    'Turso',
   ];
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 p-4">
+    <div className="flex items-center justify-center  min-h-[100% - 3.5rem ] bg-gradient-to-r from-blue-100 to-purple-100 p-4">
       <Card className="w-full max-w-2xl shadow-xl">
         <CardHeader>
           <CardTitle className="text-4xl font-bold text-center text-blue-800">
@@ -32,11 +37,7 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap justify-center gap-2 mb-6">
             {technologies.map((tech, index) => (
-              <Badge
-                key={index}
-                variant="secondary"
-                className="text-sm px-3 py-1"
-              >
+              <Badge key={index} className="text-sm px-3 py-1">
                 {tech}
               </Badge>
             ))}
@@ -51,7 +52,19 @@ export default function Home() {
               <li>Responsive design with Tailwind CSS</li>
               <li>Server-side rendering with Next.js</li>
               <li>Integration with Google&apos;s generative API</li>
+              <li>
+                Embedding and reranking model from Mixedbread for related reads
+              </li>
+              <li>Drizzle ORM for database operations</li>
+              <li>Turso for Vector Database</li>
             </ul>
+            <p className="text-center font-semibold mt-2">
+              Made with ❤️ by{' '}
+              <Link className="text-blue-500" href="https://patelvivek.dev">
+                <SquareArrowOutUpRight className="inline-block w-4 h-4" /> Vivek
+                Patel{' '}
+              </Link>
+            </p>
           </div>
         </CardContent>
       </Card>
